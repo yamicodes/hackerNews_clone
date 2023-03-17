@@ -12,9 +12,9 @@ export default function Story(story){
             |
             <a href='#/item?id=${story.id}'> ${story.comments_count} comments</a>
             |
-            <span class="favourites">
+            <span class="favourite" data-story='${JSON.stringify(story)}'>
                 <img class="heart" src="https://icon.now.sh/heart/ccc">
-                Add To Favorites
+                ${story.isFavourite ? "Remove from Favourites" : "Add To Favourites" }
             </span>
         </div>
     </div>`;
